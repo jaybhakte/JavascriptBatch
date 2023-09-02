@@ -4,17 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* tagname  */
+        input{
+            background-color: aqua;
+            color: black;
+        }
+       /* using id  */
+       #age{
+        background-color: red;
+        color: white;
+       }
+
+       #pass{
+        background-color: green;
+        color: white;
+       }
+
+       /* using class */
+       .inputTag{
+        background-color: rgb(255, 226, 3);
+        color: black;
+       }
+
+       .container{
+        height: 50%;
+        width: 50%;
+       }
+
+       .para{
+        font-size: 20px;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: normal;
+       }
+    </style>
 </head>
 <body>
     <h1>HTML Forms</h1>
-    <form action="" >
+ 
+ <div class="container inputTag para" id="box">
+    <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, itaque corporis libero explicabo voluptate eligendi vero eos ut excepturi accusantium, aut impedit a aliquam dolorem et modi incidunt, provident iusto.</p>
+    <h1 id="heading">Hello All</h1>
+ </div>
+
+
+    <form action="" autocomplete="on">
         <label for="fname">First Name</label>
-        <input type="text">
+        <input placeholder="enter your name" type="text" size="20" maxlength="4">
         <br>
         <label for="email">Email</label>
-        <input type="email" ><br>
+        <input placeholder="enter your email" type="email" required ><br>
         <label for="passwrod">Password</label>
-        <input type="password">
+        <input type="password" id="pass">
         <br>
         I agree
         <input type="checkbox" name="t1"> <br>
@@ -27,18 +69,18 @@
         Female <input type="radio" name="gender">
         Other <input type="radio" name="gender">
         <br>
-        <label for="age">age</label>
-        <input type="number">
+        <label for="age" >age</label>
+        <input type="number" value="15" readonly id="age">
         <br>
         <label for="date">Date</label>
-        <input type="date">
+        <input type="date" min="2000-01-02" max="1979-12-31" class="inputTag">
         <br>
         <input type="datetime-local">
-        <input type="file">
+        <input type="file" multiple class="inputTag">
         <br>
         <label for="color">Color Intesity</label>
         <input type="range">
-        <input type="button" value="Submit">
+        <input type="button" value="Submit" >
         <input type="color" name="">
         <input type="reset" >
         <input type="search" name="" id="">
@@ -55,6 +97,40 @@
 <label for="feedback">FeedBack</label>
     <textarea name="para"  rows="2" cols="30"></textarea>
 
-    <a href="https://www.google.com"  target="_parent">Google</a>
+    <a href="https://www.google.com"  target="_self">Google</a>
+
+    <hr>
+    <form action="">
+        <fieldset>
+            <legend>My Info
+            </legend>
+        <label for="">Name</label>
+        <input type="text" class="inputTag"> <br>
+        <label for="">Email</label>
+        <input type="email"><br> <br>
+        <input type="button" value="Submit">
+    </fieldset>
+    </form>
+
+    <form action="">
+        <fieldset >
+            <legend>My Contact
+            </legend>
+        <label for="">Number</label>
+        <input type="text"> <br>
+        <label for="">Email</label>
+        <input type="email"><br> <br>
+        <input  type="button" value="Submit">
+    </fieldset>
+    </form>
+
+    <form action="">
+        <input list="browsers" >
+        <datalist id="browsers">
+            <option value="Internet Explorer" ></option>
+            <option value="Opera"></option>
+            <option value="chrome"></option>
+        </datalist>
+    </form>
 </body>
-</html>
+</html> 
